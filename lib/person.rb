@@ -2,7 +2,7 @@ class Person  #create a person class
     attr_reader:name   #attr_reader=>can not change
     attr_accessor:bank_account, :happiness, :hygiene
     #attr_accesso=>reader&writer,can change
-    
+
     #that is initialized with a name (can't change)
     #initialized with a bank_account of $25
     ##initialized with both happiness and hygiene's index value = 8
@@ -17,9 +17,9 @@ class Person  #create a person class
         if index > 10
             @happiness = 10
         elsif index < 0
-            @happiness = 0
+          @happiness = 0
         else @happiness = index
-        end 
+        end
     end
 #########################################
     def hygiene=(index)
@@ -28,30 +28,30 @@ class Person  #create a person class
         elsif index < 0
             @hygiene = 0
         else @hygiene = index
-        end 
+        end
     end
 #########################################
-    def happy? 
+    def happy?
         if @happiness > 7
             return true
-        else 
+        else
             return false
         end
     end
 #########################################
-    def clean? 
+    def clean?
         if @hygiene > 7
             return true
-        else 
+        else
             return false
         end
     end
-#########################################    
+#########################################
     def get_paid(salary)
         @bank_account += salary
         return "all about the benjamins"
     end
-#########################################  
+#########################################
     def take_bath
        self.hygiene += 4
         return "♪ Rub-a-dub just relaxing in the tub ♫"
@@ -61,13 +61,13 @@ class Person  #create a person class
     self.hygiene -= 3
     self.happiness += 2
     return "♪ another one bites the dust ♫"
-    end 
+    end
 #########################################
     def call_friend(person)
     self.happiness += 3
     person.happiness += 3
     return "Hi #{person.name}! It's #{self.name}. How are you?"
-    end 
+    end
 #########################################
     def start_conversation(person,topic)
         if topic == "politics"
@@ -80,9 +80,9 @@ class Person  #create a person class
         person.happiness += 1
         return "blah blah sun blah rain"
         ###
-        else 
+        else
         return "blah blah blah blah blah"
         end
     end
 #########################################
-end  
+end
